@@ -1,0 +1,77 @@
+csharp
+Copy code
+using System;
+Esta linha inclui o namespace System, que contém classes fundamentais e fornece acesso à funcionalidade principal do .NET.
+
+csharp
+Copy code
+class Program
+{
+    static void Main()
+    {
+Inicia a definição da classe chamada Program e declara o método Main, que é o ponto de entrada do programa.
+
+csharp
+Copy code
+    Console.WriteLine("Digite um caractere:");
+    string entrada = Console.ReadLine();
+Exibe a mensagem "Digite um caractere:" no console e aguarda a entrada do usuário. A entrada é armazenada na variável entrada, que é do tipo string.
+
+csharp
+Copy code
+    if (entrada.Length == 1)
+    {
+        char caractere = entrada[0];
+Verifica se a entrada tem exatamente um caractere. Se for verdadeiro, armazena o primeiro caractere da entrada na variável caractere, que é do tipo char.
+
+csharp
+Copy code
+        switch (caractere)
+        {
+            case 'a':
+            case 'e':
+            case 'i':
+            case 'o':
+            case 'u':
+            case 'A':
+            case 'E':
+            case 'I':
+            case 'O':
+            case 'U':
+                Console.WriteLine("É uma vogal");
+                break;
+Usa a estrutura switch para verificar o valor de caractere. Se for uma vogal (maiúscula ou minúscula), imprime "É uma vogal".
+
+csharp
+Copy code
+            default:
+                if (char.IsDigit(caractere))
+                {
+                    Console.WriteLine("É um número");
+                }
+                else
+                {
+                    Console.WriteLine("É uma consoante ou caractere especial");
+                }
+                break;
+Se caractere não for uma vogal, verifica se é um dígito usando char.IsDigit. Se for, imprime "É um número". Caso contrário, imprime "É uma consoante ou caractere especial".
+
+csharp
+Copy code
+        }
+    }
+    else
+    {
+        Console.WriteLine("Por favor, digite apenas um caractere.");
+    }
+Fecha a estrutura condicional if e, caso a entrada não tenha exatamente um caractere, imprime a mensagem "Por favor, digite apenas um caractere."
+
+csharp
+Copy code
+}
+Fecha o método Main.
+
+csharp
+Copy code
+}
+Fecha a definição da classe Program.
